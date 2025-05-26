@@ -19,8 +19,8 @@ int mindistance(int distance[], bool stat[])
 
 void dijkstra(int graph[V][V], int source, string stations[V])
 {
-    int distance[53];
-    bool stat[53];
+    int distance[V];
+    bool stat[V];
     for (int k = 0; k < V; k++)
     {
         distance[k] = INT_MAX;
@@ -77,10 +77,16 @@ int main()
     string stations[V] = {"Muzaffarpur", "Jubba Sahani", "Pramajeevar Tarajeevar", "Benipurgram", "New Runnisaidpur", "Runnisaidpur", "Garha", "Dumra", "Bhisa", "Sitamarhi", "Kaparpura", "Kanti", "Piprahan", "Nariyar", "Motipur", "Mehwal", "Mehsi", "harpur Nag", "Chakia", "Kuria Halt", "pipra", "Bangari", "Jiwdhara", "Motihari Court", "Bapudham Motihari"};
 
     cout << endl
-         << "Enter source station: " << endl;
+         << "Enter source station index (0 to 24): "; << endl;
     for (int i = 0; i < V; i++)
         cout << "Enter " << i << " for " << stations[i] << endl;
     cin >> source;
+
+    if (source < 0 || source >= V) {
+        cout << "Invalid station index!" << endl;
+        return 1;
+    }
+    
     dijkstra(graph, source, stations);
     cout << endl;
     return 0;
