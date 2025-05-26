@@ -77,7 +77,7 @@ int main()
     string stations[V] = {"Muzaffarpur", "Jubba Sahani", "Pramajeevar Tarajeevar", "Benipurgram", "New Runnisaidpur", "Runnisaidpur", "Garha", "Dumra", "Bhisa", "Sitamarhi", "Kaparpura", "Kanti", "Piprahan", "Nariyar", "Motipur", "Mehwal", "Mehsi", "harpur Nag", "Chakia", "Kuria Halt", "pipra", "Bangari", "Jiwdhara", "Motihari Court", "Bapudham Motihari"};
 
     cout << endl
-         << "Enter source station index (0 to 24): "; << endl;
+         << "Enter source station index (0 to 24): " << endl;
     for (int i = 0; i < V; i++)
         cout << "Enter " << i << " for " << stations[i] << endl;
     cin >> source;
