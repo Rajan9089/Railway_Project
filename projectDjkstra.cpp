@@ -38,7 +38,7 @@ void dijkstra(int graph[V][V], int source, string stations[V])
                 distance[i] = distance[m] + graph[m][i];
         }
     }
-    cout << "Minimum distance from  " << stations[source] << " to every station is given below: " << endl;
+    cout << "\nMinimum distance from  " << stations[source] << " to every station is given below: \n" << endl;
     for (int k = 0; k < V; k++)
     {
         cout << "Minimum distance from " << stations[source] << " to " << stations[k] << " is " << distance[k] << " km. " << endl;
